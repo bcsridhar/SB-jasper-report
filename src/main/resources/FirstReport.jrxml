@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FirstReport" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ff98742a-acaf-43b7-953e-74c0c105784d">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<parameter name="companyName" class="java.lang.String"/>
+	<parameter name="companyAddress" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{companyAddress}]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[select * from address]]>
+	</queryString>
+	<field name="id" class="java.lang.Long"/>
+	<field name="firstName" class="java.lang.String"/>
+	<field name="lastName" class="java.lang.String"/>
+	<field name="street" class="java.lang.String"/>
+	<field name="city" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#FFFFFF" uuid="fc274090-280a-4d07-be21-9f0b83410d31"/>
+				<staticText>
+					<reportElement x="20" y="39" width="250" height="40" forecolor="#EB2421" uuid="71b89e10-316f-4a4b-a3f5-b7f9316b1f05"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Calibri" size="26" isBold="true"/>
+					</textElement>
+					<text><![CDATA[EMPLOYEE LIST]]></text>
+				</staticText>
+				<image>
+					<reportElement x="480" y="38" width="80" height="35" uuid="6a1288d7-87df-4942-86e4-ec26420e7a07"/>
+					<imageExpression><![CDATA["https://www.lifafa.com/sites/lifafa.com/themes/custom/lifafa/images/logo.png"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="71">
+			<textField>
+				<reportElement x="0" y="0" width="250" height="20" uuid="eb2ea0fb-3ce4-42f3-b801-a5b6fbc82550"/>
+				<textElement>
+					<font fontName="Calibri" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{companyName}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="23" width="250" height="20" uuid="dc4a590e-c3b3-4a6e-8603-a8aec177b640"/>
+				<textElement>
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{companyAddress}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="26">
+			<line>
+				<reportElement x="0" y="20" width="555" height="3" forecolor="#ADACAC" uuid="91c05301-510c-43b5-b3b9-d078201639bf"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="111" height="20" forecolor="#006699" backcolor="#FFFFFF" uuid="278bd99e-ecaf-435a-9d93-499d70765c87">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="35c5d446-4986-4c27-a65d-4245ba95da95"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="111" y="0" width="111" height="20" forecolor="#006699" backcolor="#FFFFFF" uuid="cdd4936f-e9e8-4de9-92c5-46c9d04ed0da">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5eef21ff-042a-44ce-a4c9-c8611a58680e"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FIRSTNAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="222" y="0" width="111" height="20" forecolor="#006699" backcolor="#FFFFFF" uuid="35e871fd-838b-4a9c-8c1b-1e55a58b4f56">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9a725a77-f9f7-4cd5-a776-6a2eda22f073"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LASTNAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="333" y="0" width="111" height="20" forecolor="#006699" backcolor="#FFFFFF" uuid="1159e0e6-53a3-49fc-bbf3-00eac3ab1436">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ae1150fa-fede-4d5c-821c-2de0f38fdee4"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STREET]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="444" y="0" width="111" height="20" forecolor="#006699" backcolor="#FFFFFF" uuid="929ec4d7-4563-4e06-8402-fb221f1a9dda">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a638a7cc-0b4d-4b6e-a6fb-460161f8ecd3"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CITY]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" forecolor="#ADACAC" uuid="ffff0a84-9396-44e9-a970-0573c9eb58a5"/>
+			</line>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="0" width="111" height="20" uuid="ad3b3d2d-bc0b-45d2-86eb-53d52e8b9d4c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="35c5d446-4986-4c27-a65d-4245ba95da95"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="111" y="0" width="111" height="20" uuid="2eca8ca3-98f2-4262-af90-c2c2482ce38f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5eef21ff-042a-44ce-a4c9-c8611a58680e"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{firstName}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="222" y="0" width="111" height="20" uuid="5955cf40-c6a1-4002-8412-522e9f22a19e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9a725a77-f9f7-4cd5-a776-6a2eda22f073"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lastName}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="333" y="0" width="111" height="20" uuid="c1d26ca0-f992-47cb-858c-cc4981de2990">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ae1150fa-fede-4d5c-821c-2de0f38fdee4"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{street}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="444" y="0" width="111" height="20" uuid="ea8e0aeb-14b4-4642-8ff6-651db5d5ceef">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a638a7cc-0b4d-4b6e-a6fb-460161f8ecd3"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{city}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="48">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="35" width="515" height="13" backcolor="#FFFFFF" uuid="1d921b53-fb87-4578-9982-ec1b3058704a"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="35" width="40" height="13" backcolor="#FFFFFF" uuid="a8d9637a-08d0-42a2-a80f-e411dee61813"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="35" width="100" height="13" uuid="b3f5d134-694d-466f-a4cc-7555b768f67e"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="1" width="555" height="1" forecolor="#FA5350" uuid="50faa379-ec16-491f-ac17-8b2fc369104b"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="5" width="380" height="15" uuid="af4a7997-fd81-4cc0-b6ea-46246c871a6b"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Note:- This is only a summary, Please make a separate request for the detailed list.]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
